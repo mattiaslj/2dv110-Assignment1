@@ -2,9 +2,10 @@ package program;
 
 public class ClassToBeTested {
 	
-	public ClassToBeTested(){
-		
-		
-	}
+	int someImportantVariable;
 	
+	public ClassToBeTested(int in){
+		someImportantVariable = in;
+	}
+
 }
