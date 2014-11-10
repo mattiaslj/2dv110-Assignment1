@@ -1,4 +1,4 @@
-packade program;
+package program;
 
 public class Add{
   
