@@ -7,5 +7,4 @@ public class ClassToBeTested {
 	public ClassToBeTested(int in){
 		someImportantVariable = in;
 	}
-
 }
