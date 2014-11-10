@@ -4,11 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import program.ClassToBeTested;
+
 public class FirstTest {
 
 	@Test
 	public void test() {
-		new TestClass();
+		new ClassToBeTested(10);
 	}
 
 }
+
