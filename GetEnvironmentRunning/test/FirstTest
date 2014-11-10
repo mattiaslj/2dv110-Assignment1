@@ -10,8 +10,7 @@ public class FirstTest {
 
 	@Test
 	public void test() {
-		new ClassToBeTested(10);
+		ClassToBeTested a = new ClassToBeTested(10);
 	}
 
 }
-
