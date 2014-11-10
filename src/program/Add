@@ -1,0 +1,19 @@
+packade program;
+
+public class Add{
+  
+  int a;
+  int b;
+
+
+  public Add(int in1, int in2){
+    a = in1;
+    b = in2;
+  }
+
+  public int add(){
+    return a+b;
+  }
+  
+
+}
