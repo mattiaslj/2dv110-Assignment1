@@ -1,7 +1,7 @@
 package tests;
 
 import static org.junit.Assert.*;
-
+import program.Game;
 import org.junit.Test;
 
 public class GameTest {
