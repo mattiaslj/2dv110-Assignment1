@@ -1,0 +1,9 @@
+package gameOfSticks.controller;
+
+public class PlayGame {
+	
+	public boolean Play(Game game, Console view){
+		
+	}
+	
+}
