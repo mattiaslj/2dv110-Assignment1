@@ -1,14 +1,18 @@
-package gameOfSticks.view;
+package GameOfSticks.view;
+
+import java.io.PrintWriter;
 
 public class Console {
 
-	public static String WELCOME = "Welcome to a Game Of Sticks!";
+	public final static String WELCOME = "Welcome to a Game Of Sticks!";
+	private PrintWriter pw;
 
-	public Console(){
+	public Console(PrintWriter out){
+		pw = out;
 	}
 	
 	public void showWelcomeMessage() {
-		System.out.println(WELCOME);
+		pw.println(WELCOME);
 		
 	}
 	
