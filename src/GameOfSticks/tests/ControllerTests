@@ -1,10 +1,11 @@
- package tests;
+package tests;
 
 import static org.junit.Assert.*;
 import gameOfSticks.controller.*;
 import gameOfSticks.model.*;
 import gameOfSticks.view.*;
 import org.junit.Test;
+
 
 public class ControllerTests {
 
