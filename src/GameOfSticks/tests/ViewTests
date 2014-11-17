@@ -1,14 +1,10 @@
-package tests;
+package GameOfSticks.tests;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
-
 import java.io.PrintWriter;
-
-import gameOfSticks.view.Console;
-
+import GameOfSticks.view.Console;
 import org.junit.Test;
-import org.mockito.Mock;
 
 public class ViewTests {
 	
@@ -18,19 +14,12 @@ public class ViewTests {
 	@Test
 	public void shouldShowWelcomeMessage() {
 	console = mock(PrintWriter.class);
-	sut = new Console();			
+	sut = new Console(console);			
 	sut.showWelcomeMessage();
 	verify(console).println(Console.WELCOME);
 	
 	}
-	
-	
-	@Test
-	public void shouldShowSticksLeft(){
-		console = mock(PrintWriter.class);
-		sut = new Console();
-		sut.showSticksLeft();
-		verify(console).println(Console.STICKS_LEFT);
-	}
 
 }
+
+
