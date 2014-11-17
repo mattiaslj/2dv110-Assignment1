@@ -1,9 +1,16 @@
 package gameOfSticks.model;
 
 public class Game {
+	private int STICKS_LEFT;
+	
+	
 	
 	public Game(){
-		
+		STICKS_LEFT = 22;
+	}
+
+	public int getSticksLeft() {
+		return STICKS_LEFT;
 	}
 	
 }
