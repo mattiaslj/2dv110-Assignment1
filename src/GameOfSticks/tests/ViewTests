@@ -5,21 +5,23 @@ import static org.mockito.Mockito.*;
 import java.io.PrintWriter;
 import GameOfSticks.view.Console;
 import org.junit.Test;
+import GameOfSticks.model.Game;
 
 public class ViewTests {
-	
+
 	private PrintWriter console;
 	private Console sut;
+	private Game g;
 
 	@Test
 	public void shouldShowWelcomeMessage() {
-	console = mock(PrintWriter.class);
-	sut = new Console(console);			
-	sut.showWelcomeMessage();
-	verify(console).println(Console.WELCOME);
-	
+		console = mock(PrintWriter.class);
+		sut = new Console(console);			
+		sut.showWelcomeMessage();
+		verify(console).println(Console.WELCOME);
+
 	}
+	
+	
 
 }
-
-
