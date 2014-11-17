@@ -1,14 +1,36 @@
 package tests;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
+
+import java.io.PrintWriter;
+
+import gameOfSticks.view.Console;
 
 import org.junit.Test;
+import org.mockito.Mock;
 
 public class ViewTests {
+	
+	private PrintWriter console;
+	private Console sut;
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void shouldShowWelcomeMessage() {
+	console = mock(PrintWriter.class);
+	sut = new Console();			
+	sut.showWelcomeMessage();
+	verify(console).println(Console.WELCOME);
+	
+	}
+	
+	
+	@Test
+	public void shouldShowSticksLeft(){
+		console = mock(PrintWriter.class);
+		sut = new Console();
+		sut.showSticksLeft();
+		verify(console).println(Console.STICKS_LEFT);
 	}
 
 }
