@@ -2,4 +2,14 @@ package gameOfSticks.view;
 
 public class Console {
 
+	public static String WELCOME = "Welcome to a Game Of Sticks!";
+
+	public Console(){
+	}
+	
+	public void showWelcomeMessage() {
+		System.out.println(WELCOME);
+		
+	}
+	
 }
