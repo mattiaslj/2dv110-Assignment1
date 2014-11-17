@@ -1,9 +1,19 @@
 package gameOfSticks.controller;
 
+import java.io.PrintWriter;
+
+import gameOfSticks.model.Game;
+import gameOfSticks.view.Console;
+
 public class PlayGame {
+	Console console;
+	Game game;
 	
-	public boolean Play(Game game, Console view){
+	public boolean Play(Game game, Console console){
+		this.game = game;
+		this.console = console;
 		
+		return false;
 	}
 	
 }
