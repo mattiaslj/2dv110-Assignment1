@@ -1,14 +1,17 @@
 package tests;
 
 import static org.junit.Assert.*;
-
+import gameOfSticks.model.*;
 import org.junit.Test;
 
 public class ModelTests {
 
+	Game game;
+	
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void shouldReturnNumberOfSticksLeft() {
+		game = new Game();
+		assertEquals("22 sticks when game is created: ", 22, game.getSticksLeft());
 	}
 
 }
