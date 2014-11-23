@@ -33,6 +33,15 @@ public class ViewTests {
 		assertEquals("There is " + g.getSticksLeft() + " left.", outContent.toString());
 	}
 	
+	
+	public void printSticks(Game g) {
+		for(int i = 0; i < g.getSticksLeft(); i++){
+			System.out.print("|");
+		}
+		
+	}
+	
+	
 	public void selectNumberOfSticks(Game g) {
 		System.out.println("Select number of sticks");
 		
