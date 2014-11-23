@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 
 public class Console {
 
-	public final static String WELCOME = "Welcome to a Game Of Sticks!";
+	/*public final static String WELCOME = "Welcome to a Game Of Sticks!";
 	private PrintWriter pw;
 
 	public Console(PrintWriter out){
@@ -13,6 +13,25 @@ public class Console {
 	
 	public void showWelcomeMessage() {
 		pw.println(WELCOME);
+		
+	}*/
+	
+	
+	
+	public void textSticks(Game g) {
+		System.out.println("There is " + g.getSticksLeft() + " sticks left.");
+		
+	}
+
+	public void printSticks(Game g) {
+		for(int i = 0; i < g.getSticksLeft(); i++){
+			System.out.print("|");
+		}
+		
+	}
+
+	public void selectNumberOfSticks(Game g) {
+		System.out.println("Select number of sticks");
 		
 	}
 	
