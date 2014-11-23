@@ -23,5 +23,16 @@ public class ViewTests {
 	}
 	
 	
+	@Test
+	public void shouldPrintSticksLeft(){
+		c = new Console();
+		g = new Game();
+		
+		System.setOut(new PrintStream(outContent));
+		c.printSticks();
+		assertEquals("There is " + g.getSticksLeft() + " left.", outContent.toString());
+	}
+	
+	
 
 }
