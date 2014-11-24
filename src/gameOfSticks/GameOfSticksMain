@@ -1,0 +1,21 @@
+package gameOfSticks;
+
+import gameOfSticks.controller.PlayGame;
+import gameOfSticks.model.Game;
+import gameOfSticks.view.Console;
+
+public class GameOfSticksMain {
+
+	public static void main(String[] args){
+		
+		Game g = new Game();
+		Console c = new Console(System.in, System.out);
+		PlayGame pg = new PlayGame();
+		
+		while(pg.Play(g, c)){
+			
+		}
+		
+	}
+	
+}
