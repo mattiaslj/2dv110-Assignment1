@@ -1,0 +1,21 @@
+package gameOfSticks.model;
+
+public class Game {
+
+	private int STICKS_LEFT;
+
+	public Game(){
+		STICKS_LEFT = 22;
+	}
+
+	public int getSticksLeft() {
+		return STICKS_LEFT;
+	}
+
+	public void drawStick(int in) {
+		if(in > 3 || in < 1)
+			throw new IllegalArgumentException();
+		
+		STICKS_LEFT -= in;
+	}
+}
