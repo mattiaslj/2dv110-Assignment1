@@ -1,0 +1,17 @@
+package gameOfSticks.tests;
+
+import org.junit.Test;
+
+import gameOfSticks.controller.PlayGame;
+
+public class ControllerTests {
+
+	PlayGame p;
+
+	@Test
+	public void shouldCreatePlayGame() {
+
+		p = new PlayGame();
+
+	}
+}
