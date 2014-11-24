@@ -1,0 +1,47 @@
+package gameOfSticks.tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import gameOfSticks.model.Game;
+
+public class ModelTests {
+
+	Game g;
+
+
+	@Test
+	public void shouldCreateGame() {
+		g = new Game();
+	}
+
+
+	@Test
+	public void shouldReturnSticksLeft(){
+		g = new Game();
+
+		int sticks = g.getSticksLeft();
+
+		assertEquals(22, sticks);
+	}
+
+	
+	@Test
+	public void shouldDrawStick(){
+		g = new Game();
+		g.drawStick(1);
+		
+		int sticksLeft = g.getSticksLeft();
+		assertEquals(sticksLeft, 21);
+		
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void shouldThrowExceptionDrawStick(){
+		g = new Game();
+		g.drawStick(4);
+			
+	}
+
+}
