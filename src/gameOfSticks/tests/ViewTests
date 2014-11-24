@@ -1,0 +1,106 @@
+package gameOfSticks.tests;
+
+import static org.junit.Assert.*;
+import org.mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import java.io.PrintStream;
+import org.junit.Test;
+
+import gameOfSticks.controller.PlayGame;
+import gameOfSticks.model.Game;
+import gameOfSticks.view.Console;
+
+public class ViewTests {
+
+	Game g;
+	Console c;
+	PlayGame pg;
+	PrintStream ps;
+	
+	
+
+	@Test
+		public void shouldCreateConsole() {
+			c = new Console(System.in, System.out);
+		}
+	
+	@Test
+	public void shouldGetInteger() {
+
+
+		Console c = mock(Console.class);
+		when(c.getInput()).thenReturn(3);
+
+		assertEquals(c.getInput(), 3);
+	}
+
+	
+	/*
+	 * 
+	 * BAD TEST,,,,, NOT CORRECT.... MIGHT NOT NEED
+	 */
+	@Test
+	public void shouldGetWrongInteger() throws Exception {
+		c = mock(Console.class);
+		when(c.getInput()).thenReturn(5);
+
+		c.getInput();
+
+		verify(c).getInput();
+	}
+	
+	@Test
+	public void shouldPrintSticksLeft(){
+	
+		ps = mock(PrintStream.class);
+		c = new Console(System.in, ps);
+		g = new Game();
+		c.printSticksLeft(g);
+		verify(ps, Mockito.times(22)).print("|");
+		
+	}
+
+	@Test
+	public void shouldTextHowManySticksLeft(){
+		
+		ps = mock(PrintStream.class);
+		c = new Console(System.in, ps);
+		g = new Game();
+		c.textSticksLeft(g);
+		verify(ps).println("There is " + g.getSticksLeft() + " sticks left.");
+	}
+	
+
+	@Test
+	public void shouldShowSelectNumberOfSticks(){
+		ps = mock(PrintStream.class);
+		c = new Console(System.in, ps);
+		g = new Game();
+		c.selectNumberOfSticks();
+		verify(ps).println("Select number of sticks\n 1,2 or 3");
+
+	}
+
+
+	@Test
+	public void shouldShowRules(){
+		ps = mock(PrintStream.class);
+		c = new Console(System.in, ps);
+		g = new Game();
+		c.showRules();
+		verify(ps).println("The player who draws the last stick loses");
+	}
+	 
+	@Test
+	public void shouldNewLine(){
+		ps = mock(PrintStream.class);
+		c = new Console(System.in, ps);
+		g = new Game();
+		c.newLine();
+		verify(ps).println("\n");
+		
+	}
+
+}
