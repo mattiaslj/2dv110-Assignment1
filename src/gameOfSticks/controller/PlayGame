@@ -1,0 +1,31 @@
+package gameOfSticks.controller;
+
+import gameOfSticks.model.Game;
+import gameOfSticks.view.Console;
+
+public class PlayGame {
+
+
+	public boolean Play(Game g, Console c){
+		c.textSticksLeft(g);
+		c.newLine();
+		c.printSticksLeft(g);
+		c.newLine();
+		c.showRules();
+		c.newLine();
+		c.selectNumberOfSticks();
+		
+		while(c.getInput() != 0){
+			
+			if(c.getInput() == 1){
+				
+			}
+			
+			return true;
+		}
+		
+
+		return false;
+	}
+
+}
