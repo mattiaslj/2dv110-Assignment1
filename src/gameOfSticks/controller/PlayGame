@@ -24,7 +24,7 @@ public class PlayGame {
 			
 		} else if(in == 0){
 			return false;
-		} 
+		}  
 		
 		if(g.getSticksLeft() < 2){
 			c.newLine();
