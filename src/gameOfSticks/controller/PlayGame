@@ -9,7 +9,7 @@ public class PlayGame {
 	public boolean play(Game g, Console c){
 		c.textSticksLeft(g);
 		c.printSticksLeft(g);
-		c.newLine(); 
+		c.newLine();
 		
 		int in = c.getInput(); 
 
@@ -19,12 +19,12 @@ public class PlayGame {
 		} else if(in == 2){
 			g.drawStick(2);
 			
-		} else if(in == 3){ 
+		} else if(in == 3){
 			g.drawStick(3);
 			
-		} else if(in == 0){ 
-			return false; 
-		}  
+		} else if(in == 0){
+			return false;
+		} 
 		
 		if(g.getSticksLeft() < 2){
 			c.newLine();
