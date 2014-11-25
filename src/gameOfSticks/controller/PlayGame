@@ -9,7 +9,7 @@ public class PlayGame {
 	public boolean play(Game g, Console c){
 		c.textSticksLeft(g);
 		c.printSticksLeft(g);
-		c.newLine();
+		c.newLine(); 
 		
 		int in = c.getInput(); 
 
