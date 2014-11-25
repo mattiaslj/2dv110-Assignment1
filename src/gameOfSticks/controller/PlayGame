@@ -6,26 +6,44 @@ import gameOfSticks.view.Console;
 public class PlayGame {
 
 
-	public boolean Play(Game g, Console c){
+	public boolean play(Game g, Console c){
 		c.textSticksLeft(g);
-		c.newLine();
 		c.printSticksLeft(g);
 		c.newLine();
-		c.showRules();
-		c.newLine();
-		c.selectNumberOfSticks();
 		
-		while(c.getInput() != 0){
+		int in = c.getInput(); 
+
+		if(in == 1){
+			g.drawStick(1);
 			
-			if(c.getInput() == 1){
-				
-			}
+		} else if(in == 2){
+			g.drawStick(2);
 			
-			return true;
+		} else if(in == 3){
+			g.drawStick(3);
+			
+		} else if(in == 0){
+			return false;
+		} 
+		
+		if(g.getSticksLeft() < 2){
+			c.newLine();
+			c.youWin();
+			c.newLine();
+			g.restartGame();
+		} else {
+			g.compDraw();
+			c.compSticksTaken(g);
+		} 
+		
+		if(g.getSticksLeft() < 2){
+			c.newLine();
+			c.youLose();
+			c.newLine();
+			g.restartGame();
 		}
 		
-
-		return false;
+		return in != 0;
 	}
 
 }
