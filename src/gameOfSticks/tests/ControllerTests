@@ -16,7 +16,7 @@ public class ControllerTests {
 	Console c;
 
 	@Test
-	public void shouldCreatePlayGame() { 
+	public void shouldCreatePlayGame() {
 		p = new PlayGame();
 	}
 	
@@ -67,32 +67,5 @@ public class ControllerTests {
 		verify(c).getInput(); 
 		assertFalse(p.play(g, c));
 	}
-	
-	
-	@Test
-	public void shouldDisplayUserLose(){
-		
-		c = mock(Console.class);
-		g = mock(Game.class);
-		p = new PlayGame();
-		
-	//	when(g.restartGame())
-		/*p.play(g, c);
-		verify(g).restartGame();
-		verify(c).youLose();*/
-	
-	}
-	
-	
-	/*@Test
-	public void shouldRestartGame(){
-		c = mock(Console.class);
-		g = mock(Game.class);
-		p = new PlayGame();
-		
-		when(g.getSticksLeft() <= 1).thenAnswer(null);
-	}*/
-	 
-	
 	
 }
