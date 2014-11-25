@@ -31,11 +31,10 @@ public class ViewTests {
 		Console c = mock(Console.class);
 		
 		when(c.getInput()).thenReturn(3);
+		c.getInput();
 		assertEquals(c.getInput(), 3);
-		/*when(c.getInput()).thenReturn(3);
-
-		assertEquals(c.getInput(), 3);*/
 	}
+
 	
 	@Test
 	public void shouldPrintSticksLeft(){
