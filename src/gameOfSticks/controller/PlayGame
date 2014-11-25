@@ -23,7 +23,7 @@ public class PlayGame {
 			g.drawStick(3);
 			
 		} else if(in == 0){
-			return false;
+			return false; 
 		}  
 		
 		if(g.getSticksLeft() < 2){
