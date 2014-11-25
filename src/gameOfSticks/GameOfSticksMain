@@ -12,7 +12,7 @@ public class GameOfSticksMain {
 		Console c = new Console(System.in, System.out);
 		PlayGame pg = new PlayGame();
 		
-		while(pg.Play(g, c)){
+		while(pg.play(g, c)){
 			
 		}
 		
