@@ -72,5 +72,5 @@ public class Console {
 	public void youWin() {
 		out.println("You win!");
 		
-	}
+	} 
 }
