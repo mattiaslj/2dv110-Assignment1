@@ -22,7 +22,7 @@ public class PlayGame {
 		} else if(in == 3){ 
 			g.drawStick(3);
 			
-		} else if(in == 0){
+		} else if(in == 0){ 
 			return false; 
 		}  
 		
