@@ -40,4 +40,8 @@ public class Game {
 		
 		return COMP_DRAW;
 	}
+	
+	public void setSticks(int in){
+		STICKS_LEFT = in;
+	}
 }
