@@ -16,7 +16,7 @@ public class ControllerTests {
 	Console c;
 
 	@Test
-	public void shouldCreatePlayGame() {
+	public void shouldCreatePlayGame() { 
 		p = new PlayGame();
 	}
 	
