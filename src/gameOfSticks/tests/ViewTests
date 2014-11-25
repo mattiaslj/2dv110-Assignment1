@@ -24,31 +24,17 @@ public class ViewTests {
 	@Test
 		public void shouldCreateConsole() {
 			c = new Console(System.in, System.out);
-		}
+		} 
 	
 	@Test
 	public void shouldGetInteger() {
-
-
 		Console c = mock(Console.class);
+		
 		when(c.getInput()).thenReturn(3);
-
 		assertEquals(c.getInput(), 3);
-	}
+		/*when(c.getInput()).thenReturn(3);
 
-	
-	/*
-	 * 
-	 * BAD TEST,,,,, NOT CORRECT.... MIGHT NOT NEED
-	 */
-	@Test
-	public void shouldGetWrongInteger() throws Exception {
-		c = mock(Console.class);
-		when(c.getInput()).thenReturn(5);
-
-		c.getInput();
-
-		verify(c).getInput();
+		assertEquals(c.getInput(), 3);*/
 	}
 	
 	@Test
@@ -79,7 +65,7 @@ public class ViewTests {
 		c = new Console(System.in, ps);
 		g = new Game();
 		c.selectNumberOfSticks();
-		verify(ps).println("Select number of sticks\n 1,2 or 3");
+		verify(ps).println("Select number of sticks\n 1, 2 or 3. 0 to quit");
 
 	}
 
@@ -101,6 +87,41 @@ public class ViewTests {
 		c.newLine();
 		verify(ps).println("\n");
 		
+	}
+	
+	@Test
+	public void shouldShowYouLose(){
+		ps = mock(PrintStream.class);
+		c = new Console(System.in, ps);
+		
+		g = new Game();
+		c.youLose();
+		verify(ps).println("You Lose!");
+		
+	}
+	
+	
+	@Test
+	public void shouldShowCompSticksTaken(){
+		ps = mock(PrintStream.class);
+		c = new Console(System.in, ps);
+		g = new Game();
+		
+		g.drawStick(3);
+		g.compDraw();
+		c.compSticksTaken(g);
+		//Computer always takes 2 if player starts to take 3
+		verify(ps).println("Computer took " + 2 + " sticks."); 
+		
+	}
+	
+	@Test
+	public void shouldShowYouWin(){
+		ps = mock(PrintStream.class);
+		c = new Console(System.in, ps);
+		
+		c.youWin();
+		verify(ps).println("You win!");
 	}
 
 }
