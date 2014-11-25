@@ -1,7 +1,6 @@
 package gameOfSticks.tests;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 import gameOfSticks.model.Game;
@@ -26,22 +25,61 @@ public class ModelTests {
 		assertEquals(22, sticks);
 	}
 
-	
+
 	@Test
 	public void shouldDrawStick(){
 		g = new Game();
-		g.drawStick(1);
-		
+		g.drawStick(1); 
+
 		int sticksLeft = g.getSticksLeft();
 		assertEquals(sticksLeft, 21);
-		
+
 	}
-	
+
 	@Test(expected = IllegalArgumentException.class)
 	public void shouldThrowExceptionDrawStick(){
 		g = new Game();
 		g.drawStick(4);
-			
+
 	}
+
+	@Test
+	public void compShouldDrawOne(){
+		g = new Game();
+		g.drawStick(2); // players draws 2
+		
+		g.compDraw(); // computers turn, computer should draw 1
+		assertEquals(g.getSticksLeft(), 19);
+
+	}	
+
+	@Test
+	public void compShouldDrawTwo(){
+		g = new Game();
+		g.compDraw();
+		assertEquals(g.getSticksLeft(), 20);
+		
+		
+	}
+	
+	@Test
+	public void shouldReturnHowMAnyCompDraw(){
+		g = new Game();
+		g.compDraw();
+		int cd = g.getCompDraw();
+		assertEquals(cd, 2);
+	}
+	
+	@Test
+	public void shouldRestartGame(){
+		g = new Game();
+		g.restartGame();
+		assertEquals(g.getSticksLeft(), 22);
+		
+	}
+
+
+
+
 
 }
